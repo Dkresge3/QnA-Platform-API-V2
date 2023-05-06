@@ -10,3 +10,5 @@ CORS(app)
 db.init_app(app)
 
 # ... Define your API routes here ...
+
+
