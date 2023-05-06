@@ -1,8 +1,12 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify, request, render_template
 from database import db
 from model import Question, Answer
 
 bp = Blueprint('api', __name__, url_prefix='/api')
+
+@bp.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 @bp.route('/questions', methods=['GET'])
 def get_questions():
