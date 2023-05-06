@@ -1,14 +1,8 @@
-from flask import Flask, jsonify, request
-from flask_cors import CORS
-from flask_swagger_ui import get_swaggerui_blueprint
-# from model import Question, Quiz, QuizQuestion
+from flask import Flask
 from database import db
+from routes import bp
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
-CORS(app)
+# app.config.from_object('config.Config')
 db.init_app(app)
-
-# ... Define your API routes here ...
-
-
+app.register_blueprint(bp)
