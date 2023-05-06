@@ -1,29 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Q&A Platform</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>My Flask Application</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="{{ url_for('index') }}">Home</a></li>
-          <li><a href="{{ url_for('questions') }}">Browse Questions</a></li>
-          <li><a href="{{ url_for('ask_question') }}">Ask a Question</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <h1>Welcome to the Q&A Platform</h1>
-      <p>Got a question? Need an answer? Look no further than the Q&A Platform. With a community of knowledgeable users, you're sure to find the help you need.</p>
-      <form action="{{ url_for('search') }}" method="get">
-        <input type="text" name="q" placeholder="Search for questions...">
-        <button type="submit">Search</button>
-      </form>
-    </main>
-    <footer>
-      <p>&copy; 2021 Q&A Platform. All rights reserved.</p>
-    </footer>
+    <h1>Welcome to my Flask Application</h1>
+    <p>This is the index page.</p>
   </body>
 </html>
